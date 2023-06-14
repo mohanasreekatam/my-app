@@ -1,10 +1,27 @@
+import React, { useState } from 'react'
 import { Stack, color } from '@mui/system'
-import React from 'react'
+//import React from 'react'
 import img7 from './Images/pi2.png'
 import Counter from './Counter'
+import { useNavigate } from 'react-router-dom';
 
 
 const Image2 = () => {
+
+  const [isLoggedIn5, setIsLoggedIn5] = useState(false);
+  const navigate5 = useNavigate();
+
+  const handleLogin5 = () => {
+    // Perform login logic here
+
+    // Assuming successful login, set isLoggedIn to true
+    setIsLoggedIn5(true);
+
+    // Navigate to the desired route
+    navigate5("/");// Example: Navigate to the Admin page after login
+
+  
+  };
   return (
     <div>
         <Stack direction='row' spacing={2}> 
@@ -19,6 +36,7 @@ const Image2 = () => {
                 <Counter />
            
                 <button style={{color:'white',backgroundColor:'#FF5F15',borderColor:"#FF5F15",height: '40px', width: '120px' }}> Add to Cart</button>
+                <button style={{color:'white',backgroundColor:'#FF5F15',borderColor:"#FF5F15",height: '40px', width: '120px' }} onClick={handleLogin5}> Back</button>
                 </Stack>
             </div>
 

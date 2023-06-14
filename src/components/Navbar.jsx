@@ -16,11 +16,33 @@ import img1 from './Images/mbs.png';
 import img2 from './Images/pizzaslide3.jpg';
 import img3 from './Images/telephone.png';
 import { Stack } from '@mui/material';
+import SimpleCarousal from './SimpleCarousal';
+import Design from './Design';
+//import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 const pages = ['HomePage', 'Products', 'Contact'];
 
 
 function Navbar() {
+
+  /*const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // Perform login logic here
+
+    // Assuming successful login, set isLoggedIn to true
+    setIsLoggedIn(true);
+
+    // Navigate to the desired route
+    navigate("/Admin"); // Example: Navigate to the Admin page after login
+  };*/
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -40,7 +62,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#FF5F1F' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#FF5F1F' }}>
 
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -185,7 +207,15 @@ function Navbar() {
           </Box>
         </Toolbar>
       </Container>
+
+      <SimpleCarousal />
+      <Design />
+  
+      
     </AppBar>
+
+    
+
   );
 }
 export default Navbar;

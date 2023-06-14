@@ -1,10 +1,44 @@
+import React, { useState } from 'react'
 import { Stack, color } from '@mui/system'
-import React from 'react'
+//import React from 'react'
 import img8 from './Images/pizza1.png'
 import Counter from './Counter'
+import { useNavigate } from 'react-router-dom';
 
 
 const Image = () => {
+
+  const [isLoggedIn4, setIsLoggedIn4] = useState(false);
+  const navigate4 = useNavigate();
+
+  const handleLogin4 = () => {
+    // Perform login logic here
+
+    // Assuming successful login, set isLoggedIn to true
+    setIsLoggedIn4(true);
+
+    // Navigate to the desired route
+    navigate4("/");// Example: Navigate to the Admin page after login
+
+  
+  };
+
+
+  const [isLoggedIn7, setIsLoggedIn7] = useState(false);
+  const navigate7 = useNavigate();
+
+  const handleLogin7 = () => {
+    // Perform login logic here
+
+    // Assuming successful login, set isLoggedIn to true
+    setIsLoggedIn7(true);
+
+    // Navigate to the desired route
+    navigate7("/Cart");// Example: Navigate to the Admin page after login
+
+  
+  };
+
   return (
     <div>
         <Stack direction='row' spacing={2}> 
@@ -18,7 +52,8 @@ const Image = () => {
                 <Stack direction='column' spacing={2} alignItems='center' justifyContent='center'>
                 <Counter />
            
-                <button style={{color:'white',backgroundColor:'#FF5F15',borderColor:"#FF5F15",height: '40px', width: '120px' }}> Add to Cart</button>
+                <button style={{color:'white',backgroundColor:'#FF5F15',borderColor:"#FF5F15",height: '40px', width: '120px' }} onClick={handleLogin7}> Add to Cart</button>
+                <button style={{color:'white',backgroundColor:'#FF5F15',borderColor:"#FF5F15",height: '40px', width: '120px' }} onClick={handleLogin4}> Back</button>
                 </Stack>
             </div>
 

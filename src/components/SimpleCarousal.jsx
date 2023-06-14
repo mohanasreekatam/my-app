@@ -2,6 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+
 const SimpleCarousal = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const SimpleCarousal = () => {
         </nav>
    
         <div style={{ marginTop: '20px',padding:'0', margin:'0'}}>
-        <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} showStatus={false} showThumbs={false}  showIndicators={false}>
+        <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} showStatus={true} showThumbs={false}  showIndicators={false}>
       <div>
         <img src="https://media.istockphoto.com/id/498682239/photo/margherita-flat-bread-pizza.jpg?s=1024x1024&w=is&k=20&c=4QIPB1JMgjA0wI4rAmbWveM9-fmYFoqyiMMyq1iYG64=" alt="Image 1" height={1500}/>
         
@@ -28,6 +29,7 @@ const SimpleCarousal = () => {
       </div>
     
     </Carousel>
+  
     </div>
     </div>
   );
