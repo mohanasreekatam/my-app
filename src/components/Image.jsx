@@ -34,8 +34,8 @@ const Image = () => {
     setIsLoggedIn7(true);
 
     // Navigate to the desired route
-    navigate7("/Cart");// Example: Navigate to the Admin page after login
-
+    navigate7("/BasicTable");// Example: Navigate to the Admin page after login
+    
   
   };
 

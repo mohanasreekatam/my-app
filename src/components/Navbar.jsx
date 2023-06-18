@@ -18,9 +18,9 @@ import img3 from './Images/telephone.png';
 import { Stack } from '@mui/material';
 import SimpleCarousal from './SimpleCarousal';
 import Design from './Design';
+import PizzaTable from './PizzaTable';
 //import React, { useState } from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -210,6 +210,7 @@ function Navbar() {
 
       <SimpleCarousal />
       <Design />
+      
   
       
     </AppBar>

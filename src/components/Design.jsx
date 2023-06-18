@@ -5,6 +5,7 @@ import img6 from './Images/greengarden.png';
 import img7 from './Images/margerita.png';
 import Button from "@mui/material/Button";
 import { useNavigate } from 'react-router-dom';
+import PizzaTable from './PizzaTable';
 
 
 const Design = () => {
@@ -47,46 +48,49 @@ const Design = () => {
     setIsLoggedIn2(true);
 
     // Navigate to the desired route
-    navigate2("/Image3");// Example: Navigate to the Admin page after login
+    navigate2("/PizzaTable");// Example: Navigate to the Admin page after login
 
   
   };
   
   return (
    <>
-    <div style={{ margin: '0', padding: '20px',alignItems:"left" }}>
+   
+    <div style={{ margin: '0', padding: '20px',alignItems:"center" }}>
         <h1> Best Pizza in Town</h1>
         <p>Pizza delivery drivers transport pizza from restaurants to people’s homes, workplaces, or other locations, and often process payments for those orders.</p>
         </div>
+        <div style={{alignItems:'center'}}>
          <Stack direction='row'>
-        <div>
+        <div style={{textAlign:'center',alignItems:'center'}}>
         <img src={img5} alt="" height={200} width={200} />
         <h3>VEGGIE PIZZA</h3>
-        <p>$19.81</p>
-        <p>Veggie pizza is a great choice if you believe more is more. It has (almost) everything: roasted red peppers, baby spinach, onions, mushrooms, tomatoes, and black olives. </p>
-        <Button variant = "contained" onClick={
-          handleLogin
-        }>BUY NOW</Button>
+        
+
+       
         </div>
-    <div>
+    <div style={{textAlign:'center'}}>
     <img src={img6} alt="" height={200} width={300}/>
     <h3>GREEN GARDEN</h3>
-    <p>$20.54</p>
-    <p>Garden Green Pizza is an extremely delicious pizza recipe that you can easily try at home. topped with garden fresh veggies with a layer of creamy mozzarella cheese!
+  
 
-</p>
-<Button variant = "contained" onClick={handleLogin1}>BUY NOW</Button>
+
     </div>
-    <div>
+    <div style={{textAlign:'center'}}>
       <img src={img7} alt="" height={200} width={200}/>
       <h3>MARGHERITA PIZZA</h3>
-      <p>$18.78</p>
-      <p>Margherita pizza is known for its ingredients representing the colours of the Italian flag. These ingredients include red tomato sauce, white mozzarella and fresh green basil.</p>
-      <Button variant = "contained"  onClick={handleLogin2}>BUY NOW</Button>  
+     
+      
     </div>
+    
+      
     
     
     </Stack>
+    
+    <Button variant = "contained"  onClick={handleLogin2} style={{height:'40' , width:'40'}}>BUY NOW</Button>
+
+</div>
     </>
   )
 }
